@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+e
+
+ h1= title 
+
+form(method='post')
+    p 
+        label Tytuł
+        input(type="text" name="title")
+    p
+        label  Opis 
+        textarea(name="opis", cols="30", rows="10") 
+    p 
+     input(type="submit" value="zapisz")
+
+

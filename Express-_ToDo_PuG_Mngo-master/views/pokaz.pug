@@ -1,0 +1,13 @@
+extends layout 
+block zawrtosc
+    .container
+        .row.my_class   
+            h1 
+                a.btn.btn-success(href=`/`) Dodaj uzykoownika: 
+            ul.list-group
+                li.list-group-item.active(aria-current='true') DANE
+                    each val, index in data
+                        li.list-group-item  
+                            .fs-4 #{val.imie} &nbsp; #{val.nazwisko}
+                            a.btn.btn-danger(href=`/edit/${val._id}`) edit &nbsp;
+                            a.btn.btn-warning(href=`/usun/${val._id}`) usun    

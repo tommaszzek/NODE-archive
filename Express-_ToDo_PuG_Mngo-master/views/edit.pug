@@ -1,0 +1,17 @@
+extends layout 
+block zawrtosc
+  .container
+    .row.my_class   
+      .col-12
+        form.row.g-3(action=`/edit/${data._id}`, method='post')
+          .col-auto
+            label(for='staticEmail2') Imie
+            input#staticEmail2.form-control-plaintext(type='text', name='imie' value=`${data.imie}`)
+          .col-auto
+          label(for='inputPassword2') Nazwisko
+            input#inputPassword2.form-control(type='text', name='nazwisko' value=`${data.nazwisko}`)
+          .col-auto
+            input.btn.btn-primary.mb-3(type='submit', value='DODAJ')
+       
+        a.btn.btn-success(href=`/pokaz`) EDYCJA USUWANIE :    
+  

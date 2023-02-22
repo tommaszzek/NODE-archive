@@ -1,0 +1,23 @@
+extends layout 
+block zawrtosc
+  .container
+    .row.my_class   
+      .col-6
+        ul.list-group
+          li.list-group-item.active(aria-current='true') DANE
+          each val, index in data
+            li.list-group-item  
+            .fs-4 #{val.imie} &nbsp; #{val.nazwisko}
+      .col-4
+        form.row.g-3(action='/', method='post')
+          .col-auto
+            label(for='staticEmail2') Imie
+            input#staticEmail2.form-control-plaintext(type='text', name='imie')
+          .col-auto
+          label(for='inputPassword2') Nazwisko
+            input#inputPassword2.form-control(type='password', name='nazwisko')
+          .col-auto
+            input.btn.btn-primary.mb-3(type='submit', value='DODAJ')
+       
+        a.btn.btn-success(href=`/pokaz`) EDYCJA USUWANIE :    
+  
